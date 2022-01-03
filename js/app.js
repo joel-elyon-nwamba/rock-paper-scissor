@@ -19,14 +19,19 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == "rock" && computerSelection == "scissor") {
+        playerScore++
         return "Player 1 wins!";
     } else if(playerSelection == "rock" && computerSelection == "paper") {
+        computerScore++
         return "The computer wins";
     } else if(playerSelection == "paper" && computerSelection == "rock") {
+        playerScore++
         return "Player 1 wins!"
     } else if(playerSelection == "paper" && computerSelection == "scissor") {
+        computerScore++
         return "The computer wins"
     } else if(playerSelection == "scissor" && computerSelection == "paper") {
+        playerScore++
         return "player 1 wins!"
     } else if(playerSelection == computerSelection) {
         return "It's a tie!"
@@ -35,11 +40,16 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
 
+function game() {
+//loop 5 rounds to play
     for(let i= 0; i < 5; i++) {
         let playerSelection = prompt("Make your selection!");
         let computerSelection = computerPlay()
         console.log(playRound(playerSelection, computerSelection));
     }
+    //display winner
+    
 }
+
+game()
