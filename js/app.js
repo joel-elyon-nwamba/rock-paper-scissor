@@ -1,5 +1,24 @@
-let computerScore = 0;
-let playerScore = 0;
+
+const gameStart = document.querySelector(".game-start");
+const rockButton = document.createElement("button");
+const paperButton = document.createElement("button");
+const scissorButton = document.createElement("button");
+
+rockButton.classList.add("rock-button");
+paperButton.classList.add("paper-button");
+scissorButton.classList.add("scissor-button");
+
+rockButton.textContent = "✊";
+scissorButton.textContent = "✂️";
+paperButton.textContent = "🌫";
+
+gameStart.appendChild(rockButton);
+gameStart.appendChild(paperButton);
+gameStart.appendChild(scissorButton);
+
+rockButton.addEventListener("click", playRound);
+paperButton.addEventListener("click", playRound);
+scissorButton.addEventListener("click", playRound);
 
 
 // The computer randomly gets rock, paper, or scissor
@@ -19,8 +38,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == "rock" && computerSelection == "scissor") {
-        playerScore++
-        return "Player 1 wins!";
+        console.log("clicked!");
     } else if(playerSelection == "rock" && computerSelection == "paper") {
         computerScore++
         return "The computer wins";
@@ -43,11 +61,11 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 //loop 5 rounds to play
-    for(let i= 0; i < 5; i++) {
-        let playerSelection = prompt("Make your selection!");
-        let computerSelection = computerPlay()
-        console.log(playRound(playerSelection, computerSelection));
-    }
+    // for(let i= 0; i < 5; i++) {
+    //     let playerSelection = prompt("Make your selection!");
+    //     let computerSelection = computerPlay()
+    //     console.log(playRound(playerSelection, computerSelection));
+    // }
     //display winner
     
 }
