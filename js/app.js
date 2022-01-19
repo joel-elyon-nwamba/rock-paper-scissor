@@ -1,24 +1,19 @@
 
-const gameStart = document.querySelector(".game-start");
-const rockButton = document.createElement("button");
-const paperButton = document.createElement("button");
-const scissorButton = document.createElement("button");
+let playerScore = 0;
+let computerScore = 0;
+const button = document.querySelectorAll("button").length;
+const playerDisplay = document.getElementById("player-display");
+const computerDisplay = document.getElementById("computer-display");
+const rockBtn = document.getElementById("btn-rock");
+const paperBtn = document.getElementById("btn-paper");
+const scissorBtn = document.getElementById("btn-scissor");
 
-rockButton.classList.add("rock-button");
-paperButton.classList.add("paper-button");
-scissorButton.classList.add("scissor-button");
-
-rockButton.textContent = "✊";
-scissorButton.textContent = "✂️";
-paperButton.textContent = "🌫";
-
-gameStart.appendChild(rockButton);
-gameStart.appendChild(paperButton);
-gameStart.appendChild(scissorButton);
-
-rockButton.addEventListener("click", playRound);
-paperButton.addEventListener("click", playRound);
-scissorButton.addEventListener("click", playRound);
+// click on all buttons
+for(let i= 0; i < button; i++) {
+    document.querySelectorAll("button")[i].addEventListener("click", function() {
+        console.log("clicked!")
+    })
+}
 
 
 // The computer randomly gets rock, paper, or scissor
@@ -59,15 +54,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function game() {
-//loop 5 rounds to play
-    // for(let i= 0; i < 5; i++) {
-    //     let playerSelection = prompt("Make your selection!");
-    //     let computerSelection = computerPlay()
-    //     console.log(playRound(playerSelection, computerSelection));
-    // }
-    //display winner
+function playgame() {
+
+
     
 }
-
-game()
