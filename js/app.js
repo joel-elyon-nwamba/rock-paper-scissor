@@ -9,11 +9,31 @@ const paperBtn = document.getElementById("btn-paper");
 const scissorBtn = document.getElementById("btn-scissor");
 
 // click on all buttons
-for(let i= 0; i < button; i++) {
-    document.querySelectorAll("button")[i].addEventListener("click", function() {
-        console.log("clicked!")
-    })
-}
+// for(let i= 0; i < button; i++) {
+//     document.querySelectorAll("button")[i].addEventListener("click", function() {
+//         const playerSelection = "rock";
+//         const computerSelection = computerPlay();
+//         console.log(playRound(playerSelection, computerSelection));
+//     })
+// }
+
+rockBtn.addEventListener("click", function() {
+        const playerSelection = "rock";
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+});
+
+paperBtn.addEventListener("click", function() {
+    const playerSelection = "rock";
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+})
+
+scissorBtn.addEventListener("click", function() {
+    const playerSelection = "rock";
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+})
 
 
 // The computer randomly gets rock, paper, or scissor
@@ -33,7 +53,8 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == "rock" && computerSelection == "scissor") {
-        console.log("clicked!");
+        playerScore++
+        return "Player 1 wins!"
     } else if(playerSelection == "rock" && computerSelection == "paper") {
         computerScore++
         return "The computer wins";
