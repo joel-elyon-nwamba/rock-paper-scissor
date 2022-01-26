@@ -3,8 +3,11 @@ let playerChoice = "";
 let playerScore = 0;
 let computerScore = 0;
 const computerDisplay = document.getElementById("computer-score")
-const playerDisplay = document.getElementById("discplay-score");
+const playerDisplay = document.getElementById("display-score");
 const buttons = document.querySelectorAll("button");
+const displayWinner = document.getElementById("display-winner");
+
+
 
 // buttons.forEach(buttons => {
 //     buttons.addEventListener("click", function() {
@@ -12,9 +15,11 @@ const buttons = document.querySelectorAll("button");
 //     });
 // })
 
-buttons.forEach(buttons => {
-    buttons.addEventListener("click", playRound)
-})
+// buttons.forEach(buttons => {
+//     buttons.addEventListener("click", function() {
+//         console.log(playRound())
+//     })
+// })
 
 
 // player choice of action
@@ -48,19 +53,19 @@ function computerPlay() {
 
 function playRound() {
     getGameResult();
-    playerSelect = playerSelection()
-    computerSelection = computerPlay()
-    displayTheWinner()
+    displayTheWinner();
     resetGame()
-    computerDisplay.textContent = "Computer Score: " + computerScore;
-    // playerDisplay.textContent = "Player Score: " + playerScore;
 }
+
+console.log(playRound())
 
 // get the results of the game
 
 function getGameResult() {
     const computerSelection = computerPlay();
     const playerSelect = playerSelection();
+    playerDisplay.textContent = "Player Score: " + playerScore;
+    computerDisplay.textContent = "Computer Score: " + computerScore;
     console.log(playerSelect)
     if(playerSelect == computerSelection) {
         return "You tie!"
@@ -84,13 +89,17 @@ function getGameResult() {
     }
 }
 
+
+
 // Display the winner
 
 function displayTheWinner() {
     if(playerScore === 5) {
-        return "You win the game!"
+        displayWinner.textContent = "You win"
+        resetGame()
     } else if(computerScore === 5) {
-        return "The computer wins the game";
+        displayWinner.textContent = "You lost try again next time"
+        resetGame()
     }
 }
 
@@ -103,3 +112,4 @@ function resetGame() {
     playerChoice = "";
 
 }
+
