@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #33CCCC;
+    
+}
+
+.container {
+    margin: 7.50em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.results {
+    display: flex;
+    padding: 10px;
+    gap: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    /* gap: 20px; */
+}
+
+h2 {
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+p {
+    font-size: 2.25rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 10px;
+    padding: 5px;
+}
+
+.display {
+    margin-top: 50px;
+    padding: 2em;
+}
+
+#display-result {
+    padding-top: 20px;
+}
+
+.game-start {
+    margin: 20px;
+    padding: 15px;
+}
+
+button {
+    padding: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+    font-size: 40px;
+    border-radius: 10px;
+    background-color: #a3cc94;
+}
+
+

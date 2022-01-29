@@ -3,10 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock-paper-scissor game</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet"> 
+        <link href="cs/styles.css" rel="stylesheet">
     </head>
     <body>
+        <div class="container">
+        <header>
+            <h2>5 Rounds to win!</h2>
+        </header>
         <div class="results">
-            <p id="display-score">players Score: 0</p>
+            <p id="display-score">Players Score: 0</p>
             <p id="computer-score">Computers Score: 0</p>
         </div>
         <div class="game-start">
@@ -14,9 +22,10 @@
             <button id="btn-paper"> 🌫</button>
             <button id="btn-scissor">✂︎</button>
         </div>
-            <div>
-                <p id="display-result"></p>
+            <div class="display">
+                <p id="display-result">Let the games begin!</p>
             </div>
+        </div>
 
         <script src="js/app.js"></script>
     </body>

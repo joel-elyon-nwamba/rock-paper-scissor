@@ -63,8 +63,8 @@ function playRound() {
 function getGameResult() {
     const computerSelection = computerPlay();
     const playerSelect = playerSelection();
-    playerDisplay.textContent = "Player Score: " + playerScore;
-    computerDisplay.textContent = "Computer Score: " + computerScore;
+    playerDisplay.textContent = "Players Score: " + playerScore;
+    computerDisplay.textContent = "Computers Score: " + computerScore;
     console.log(playerSelect)
     if(playerSelect == "rock" && computerSelection == "scissor") {
         playerScore++
@@ -94,7 +94,7 @@ function getGameResult() {
 function displayTheWinner() {
     if(playerScore === 5) {
        displayResult.textContent = "You win this round!"
-        resetGame()
+       resetGame()
     } else if(computerScore === 5) {
         displayResult.textContent = "You lost try again next time!"
         resetGame()
@@ -108,7 +108,7 @@ function resetGame() {
     computerScore = 0;
     choiceOfComputer = "";
     playerChoice = "";
-    displayResult = "";
+    // displayResult.textContent = "";
 
 }
 
